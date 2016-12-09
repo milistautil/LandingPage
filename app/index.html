@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Compra tu lista de útiles escolares desde casa en Mi Lista Útil</title>
+    <meta name="description" content="">
+
+    <link rel="stylesheet" href="../dist/stylesheets/application.css">
+  </head>
+
+  <body>
+    <div class="Application">
+      <nav class="Navigation">
+        <div class="Navigation__container">
+
+          <div class="Logo">
+            <a href="" title="Home">
+              <img class="Logo__image" src="assets/images/milistautil-logo.svg" alt="">
+              <span class="Logo__text">Milistaútil</span>
+            </a>
+          </div>
+
+        </div>
+      </nav>
+
+      <header class="Lead">
+        <div class="Lead__container">
+
+          <div class="Lead__heading">
+            <h1 class="Lead__title">Compra tu lista de útiles escolares desde casa y sin preocupaciones.</h1>
+            <p class="Lead__content">Suscríbete y consigue mejores precios comprando tu lista de útiles escolares con anticipación. Te avisaremos cuando tu lista de útiles este disponible.</p>
+          </div>
+
+          <form class="Form" class="Leadid="lead">
+            <div class="Form__group">
+              <label class="Form__label" for="leadEmail"><span>Correo electrónico</span></label>
+              
+              <div class="Form_input">
+                <input class="Form__control" type="text" id="leadEmail" placeholder="nombre@gmail.com">
+              </div>
+            </div>
+
+            <div class="u-row">
+              <div class="Form__group u-column">
+                <label class="Form__label" for="leadColegio"><span>Colegio</span></label>
+                
+                <div class="Form_input">
+                  <input class="Form__control" type="text" id="leadColegio" placeholder="Nombre del colegio">
+                </div>
+              </div>
+
+              <div class="Form__group u-column">
+                <label class="Form__label" for="leadNivel"><span>Nivel y curso</span></label>
+                
+                <div class="Form_input">
+                  <input class="Form__control" type="text" id="leadNivel" placeholder="Seleccionar">
+                  <span class="u-caret"></span>
+                </div>
+              </div>
+            </div>
+
+            <button class="Form__submit Form__control" id="leadSubmit" type="button">Quiero que me avisen</button>
+          </form>
+
+        </div>
+      </header>
+
+      <div class="Photo">
+        <div>
+          <img src="" alt="">
+        </div>
+
+        <div>
+          <span>I</span>
+          <span>I</span>
+          <span>I</span>
+          <span>I</span>
+          <span>I</span>
+          <span>I</span>
+          <span>I</span>
+          <span>I</span>
+          <span>I</span>
+          <span>I</span>
+        </div>
+      </div>
+    </div>
+    
+    <script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+    <script>
+      $('input').on('focus', function () {
+        $('input').parent().removeClass('active');
+        $(this).parent().addClass('active');
+      });
+    </script>
+  </body>
+</html>
