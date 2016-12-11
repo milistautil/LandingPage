@@ -17,7 +17,8 @@
 
           <div class="Logo">
             <a href="" title="Home">
-              <img class="Logo__image" src="assets/images/milistautil-logo.svg" alt="">
+              <img class="Logo__image big" src="../dist/images/logo-gradient.svg" alt="Mi Lista Útil">
+              <img class="Logo__image small" src="../dist/images/logo-white.svg" alt="Mi Lista Útil">
               <span class="Logo__text">Milistaútil</span>
             </a>
           </div>
@@ -33,69 +34,139 @@
             <p class="Lead__content">Suscríbete y consigue mejores precios comprando tu lista de útiles escolares con anticipación. Te avisaremos cuando tu lista de útiles este disponible.</p>
           </div>
 
-          <form class="Form" class="Leadid="lead">
-            <div class="Form__group">
-              <label class="Form__label" for="leadEmail"><span>Correo electrónico</span></label>
-              
-              <div class="Form_input">
-                <input class="Form__control" type="text" id="leadEmail" placeholder="nombre@gmail.com">
-              </div>
-            </div>
+          <div id="mc_embed_signup">
+            <form class="Form validate" action="//milistautil.us14.list-manage.com/subscribe/post?u=621bb135d504b33c5b685c4da&amp;id=fbdc77705f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate>
+              <div id="mc_embed_signup_scroll">
 
-            <div class="u-row">
-              <div class="Form__group u-column">
-                <label class="Form__label" for="leadColegio"><span>Colegio</span></label>
-                
-                <div class="Form_input">
-                  <input class="Form__control" type="text" id="leadColegio" placeholder="Nombre del colegio">
+                <div class="Form__group mc-field-group">
+                  <label class="Form__label" for="mce-EMAIL"><span>Correo electrónico</span></label>
+                  
+                  <div class="Form_input">
+                    <input class="Form__control required email" type="email" id="mce-EMAIL" name="EMAIL" value="" placeholder="nombre@gmail.com">
+                  </div>
                 </div>
-              </div>
 
-              <div class="Form__group u-column">
-                <label class="Form__label" for="leadNivel"><span>Nivel y curso</span></label>
-                
-                <div class="Form_input">
-                  <input class="Form__control" type="text" id="leadNivel" placeholder="Seleccionar">
-                  <span class="u-caret"></span>
+                <div class="u-row">
+                  <div class="Form__group u-column mc-field-group">
+                    <label class="Form__label" for="mce-SCHOOL"><span>Colegio</span></label>
+                    
+                    <div class="Form_input">
+                      <input class="Form__control" type="text" id="mce-SCHOOL" name="SCHOOL" value="" placeholder="Nombre del colegio">
+                    </div>
+                  </div>
+
+                  <div class="Form__group u-column mc-field-group">
+                    <label class="Form__label" for="mce-LEVEL"><span>Nivel y curso</span></label>
+                    
+                    <div class="Form_input">
+                      <select class="Form__control" id="mce-LEVEL" name="LABEL">
+                        <option value="-1" disabled selected>Seleccionar</option>
+                        <optgroup label="Nivel Parvulo">
+                          <option value="pre-kinder">Pre-Kinder</option>
+                          <option value="kinder">Kinder</option>
+                        </optgroup>
+                        <optgroup label="Nivel Básico">
+                          <option value="1-basico">Primero</option>
+                          <option value="2-basico">Segundo</option>
+                          <option value="3-basico">Tercero</option>
+                          <option value="4-basico">Cuarto</option>
+                          <option value="5-basico">Quinto</option>
+                          <option value="6-basico">Sexto</option>
+                          <option value="7-basico">Séptimo</option>
+                          <option value="8-basico">Octavo</option>
+                        </optgroup>
+                        <optgroup label="Nivel Medio">
+                          <option value="1-medio">Primero</option>
+                          <option value="2-medio">Segundo</option>
+                          <option value="3-medio">Tercero</option>
+                          <option value="4-medio">Cuarto</option>
+                        </optgroup>
+                      </select>
+                      <!-- <input class="Form__control" type="text" id="mce-LEVEL" name="LEVEL" value="" placeholder="Seleccionar"> -->
+                      <!-- <span class="u-caret"></span> -->
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
 
-            <button class="Form__submit Form__control" id="leadSubmit" type="button">Quiero que me avisen</button>
-          </form>
+                <div id="mce-responses" class="clear">
+                  <div class="response" id="mce-error-response" style="display:none"></div>
+                  <div class="response" id="mce-success-response" style="display:none"></div>
+                </div>
+
+                <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                  <input type="text" name="b_621bb135d504b33c5b685c4da_fbdc77705f" tabindex="-1" value="">
+                </div>
+
+                <input type="submit" value="Quiero que me avisen" name="subscribe" id="mc-embedded-subscribe" class="Form__submit Form__control">
+                <!-- <button class="Form__submit Form__control" id="mc-embedded-subscribe" name="subscribe" type="button">Quiero que me avisen</button> -->
+
+              </div>
+            </form>
+          </div>
 
         </div>
       </header>
 
-      <div class="Photo">
-        <div>
-          <img src="" alt="">
-        </div>
+      <div class="Nino">
+        <figure class="Nino__figure">
+          <img class="Nino__image" src="../dist/images/school-kid.png" alt="">
+        </figure>
 
-        <div>
-          <span>I</span>
-          <span>I</span>
-          <span>I</span>
-          <span>I</span>
-          <span>I</span>
-          <span>I</span>
-          <span>I</span>
-          <span>I</span>
-          <span>I</span>
-          <span>I</span>
+        <div class="Utiles">
+          <span class="Utiles__item calculator animated infinite rubberBand">
+            <img src="../dist/images/iconos/calculator.svg" alt="">
+          </span>
+          <span class="Utiles__item clip animated infinite rubberBand">
+            <img src="../dist/images/iconos/clip-1.svg" alt="">
+          </span>
+          <span class="Utiles__item compass animated infinite tada">
+            <img src="../dist/images/iconos/compass.svg" alt="">
+          </span>
+          <span class="Utiles__item highlighter animated infinite rubberBand">
+            <img src="../dist/images/iconos/highlighter.svg" alt="">
+          </span>
+          <span class="Utiles__item notebook animated infinite rubberBand">
+            <img src="../dist/images/iconos/notebook.svg" alt="">
+          </span>
+          <span class="Utiles__item paint-brush animated infinite tada">
+            <img src="../dist/images/iconos/paint-brush.svg" alt="">
+          </span>
+          <span class="Utiles__item paint-tube animated infinite tada">
+            <img src="../dist/images/iconos/paint-tube.svg" alt="">
+          </span>
+          <span class="Utiles__item pencil-1 animated infinite rubberBand">
+            <img src="../dist/images/iconos/pencil-1.svg" alt="">
+          </span>
+          <span class="Utiles__item pencil animated infinite rubberBand">
+            <img src="../dist/images/iconos/pencil.svg" alt="">
+          </span>
+          <span class="Utiles__item protractor animated infinite tada">
+            <img src="../dist/images/iconos/protractor.svg" alt="">
+          </span>
+          <span class="Utiles__item push-pin animated infinite rubberBand">
+            <img src="../dist/images/iconos/push-pin.svg" alt="">
+          </span>
+          <span class="Utiles__item ruler animated infinite tada">
+            <img src="../dist/images/iconos/ruler.svg" alt="">
+          </span>
+          <span class="Utiles__item scissors animated infinite tada">
+            <img src="../dist/images/iconos/scissors.svg" alt="">
+          </span>
+          <span class="Utiles__item sharpener animated infinite tada">
+            <img src="../dist/images/iconos/sharpener.svg" alt="">
+          </span>
+          <span class="Utiles__item stapler-remover animated infinite tada">
+            <img src="../dist/images/iconos/stapler-remover.svg" alt="">
+          </span>
         </div>
       </div>
     </div>
     
     <script
-  src="https://code.jquery.com/jquery-2.2.4.min.js"
-  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-  crossorigin="anonymous"></script>
-    <script>
-      $('input').on('focus', function () {
-        $('input').parent().removeClass('active');
-        $(this).parent().addClass('active');
-      });
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous">
     </script>
+    <script src="assets/javascripts/application.js"></script>
   </body>
 </html>

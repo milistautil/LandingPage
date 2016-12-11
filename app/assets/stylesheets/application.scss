@@ -1,4 +1,7 @@
+@import 'variables';
+@import 'mixins';
 @import 'normalize';
+@import 'animate';
 
 * {
   box-sizing: border-box;
@@ -33,6 +36,10 @@ a {
   color: #989CA4;
 }
 
+.animated {
+  display: inline-block;
+}
+
 .u-row {
   display: flex;
   flex-direction: row;
@@ -63,7 +70,7 @@ a {
 }
 
 .Navigation {
-  padding-top: 30px;
+  padding-top: 1.875em;
   position: absolute;
   width: 100%;
   z-index: 10;
@@ -84,9 +91,24 @@ a {
 }
 
 .Logo__image {
-  display: inline-block;
   height: auto;
   width: 200px;
+
+  &.small {
+    display: inline-block;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &.big {
+    display: none;
+
+    @include tablet {
+      display: inline-block;
+    }
+  }
 }
 
 .Logo__text {
@@ -104,22 +126,39 @@ a {
   display:     -ms-flexbox;
   display:         flex;
   height: 100%;
-  margin-left: 50%;
   min-height: 600px;
   position: relative;
-  width: 50%;
+
+  @include tablet {
+    margin-left: 50%;
+    width: 50%;
+  }
 }
 
 .Lead__container {
-  padding: 5em 6em;
+  padding: 5em 20px;
+
+  @include tablet {
+    padding-left: 3em;
+    padding-right: 3em;
+  }
+
+  @include desktop {
+    padding-left: 6em;
+    padding-right: 6em;
+  }
 }
 
 .Lead__title {
   font-family: Hind-SemiBold;
-  font-size: 2.5em;
+  font-size: 2em;
   color: #FFFFFF;
   line-height: 1.05;
   margin: 0 0 0.75em;
+
+  @include tablet {
+    font-size: 2.5em;
+  }
 }
 
 .Lead__content {
@@ -190,7 +229,7 @@ a {
 }
 
 .Form__submit {
-  background: #F95265;
+  background: #0347C7;
   color: #FFFFFF;
   cursor: pointer;
   font-family: Hind-SemiBold;
@@ -198,13 +237,121 @@ a {
   transition: background 500ms cubic-bezier(0.755, 0.050, 0.170, 0.785);
 
   &:hover {
-    background: #0347C7;
+    background: #F95265;
   }
 }
 
-.Photo {
+.Nino {
   height: 100%;
+  overflow: hidden;
   position: absolute;
   top: 0;
   width: 50%;
+}
+
+.Nino__figure {
+  bottom: -8em;
+  left: 0;
+  margin: 0;
+  position: absolute;
+}
+
+.Nino__image {
+  display: none;
+  height: auto;
+  margin: 0 auto;
+  position: relative;
+  width: 50%;
+  z-index: 99;
+
+  @include tablet {
+    display: block;
+  }
+}
+
+.Utiles {
+  display: none;
+
+  @include tablet {
+    display: block;
+  }
+}
+
+.Utiles__item {
+  position: absolute;
+
+  &.calculator {
+    left: 25%;
+    top: 40%;
+  }
+
+  &.clip {
+    left: 90%;
+    top: 90%;
+  }
+
+  &.compass {
+    left: 70%;
+    top: 55%;
+  }
+
+  &.highlighter {
+    left: 85%;
+    top: 65%;
+  }
+
+  &.notebook {
+    left: 5%;
+    top: 5%;
+  }
+
+  &.paint-brush {
+    left: 20%;
+    top: 90%;
+  }
+
+  &.paint-tube {
+    left: 25%;
+    top: 20%;
+  }
+
+  &.pencil-1 {
+    left: 10%;
+    top: 75%;
+  }
+
+  &.pencil {
+    left: 80%;
+    top: 20%;
+  }
+
+  &.protractor {
+    left: 5%;
+    top: 30%;
+  } 
+
+  &.push-pin {
+    left: 90%;
+    top: 45%;
+  }
+
+  &.ruler {
+    left: 75%;
+    top: 80%;
+  }
+
+  &.scissors {
+    left: 70%;
+    top: 35%;
+  }
+
+  &.sharpener {
+    left: 10%;
+    top: 55%;
+  }
+
+  &.stapler-remover {
+    left: 90%;
+    top: 5%;
+  }
 }

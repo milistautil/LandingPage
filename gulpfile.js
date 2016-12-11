@@ -1,14 +1,20 @@
-var gulp = require('gulp');
+var gulp = require('gulp'),
 
-var browserSync  = require('browser-sync').create(), 
+    browserSync  = require('browser-sync').create(), 
     sass         = require('gulp-sass'),
     sourcemaps   = require('gulp-sourcemaps'),
-    autoprefixer = require('gulp-autoprefixer');
-    
+    autoprefixer = require('gulp-autoprefixer'),
+
+    imagemin     = require('gulp-imagemin'),
+
+    notify       = require('gulp-notify');
 
 var input  = './app/assets/stylesheets/**/*.scss';
-var output = './dist/stylesheets';
+var output = './dist/stylesheets/';
 var styleWatchFiles = './app/assets/stylesheets/**/*.scss';
+
+var inputImages  = './app/assets/images/**/*.{png,jpg,gif,svg}';
+var outputImages = './dist/images/';
 
 var sassOptions = {
   errLogToConsole: true,
@@ -62,6 +68,21 @@ gulp.task('sass', function () {
     .pipe(browserSync.stream());
 });
 
+gulp.task('images', function() {
+  gulp.src(inputImages)
+      .pipe(imagemin({
+        progressive: true,
+        optimizationLevel: 3,
+        interlaced: true,
+        svgoPlugins: [{removeViewBox: false}]
+      }))
+      .pipe(gulp.dest(outputImages))
+      .pipe(notify({
+        message: 'TASK: "images" Completed! 💯',
+        onLast: true
+      }));
+});
+
 gulp.task('watch', function() {
   return gulp
     .watch(input, ['sass'])
@@ -78,4 +99,4 @@ gulp.task('prod', function() {
     .pipe(gulp.dest(output));
 });
 
-gulp.task('default', ['serve', 'watch']);
+gulp.task('default', ['serve', 'watch', 'images']);
