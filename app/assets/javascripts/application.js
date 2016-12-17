@@ -15,4 +15,9 @@ var $botonRegistro = $('.js-boton-registro');
 
 $botonRegistro.click(function() {
   ga('send', 'event', 'Botón Registro', 'Nuevo Registro', 'Landing Prelanzamiento');
+
+  fbq('track', 'Lead', {
+    value: 0,
+    currency: 'USD'
+  });
 });
