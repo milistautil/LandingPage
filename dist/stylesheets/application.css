@@ -3585,7 +3585,7 @@ a {
 }
 
 .Navigation {
-  padding-top: 1.875em;
+  padding-top: 1.25em;
   position: absolute;
   width: 100%;
   z-index: 10;
@@ -3598,16 +3598,23 @@ a {
 .Logo {
   display: block;
   text-align: center;
-  width: 50%;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .Logo {
+    position: fixed;
+    width: 50%;
+  }
 }
 
 .Logo a {
-  color: #FFFFFF;
+  color: white;
 }
 
 .Logo__image {
   height: auto;
-  width: 200px;
+  width: 11.875em;
 }
 
 .Logo__image.small {
@@ -3647,8 +3654,8 @@ a {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  height: 100%;
-  min-height: 600px;
+  height: auto;
+  min-height: 100%;
   position: relative;
 }
 
@@ -3660,27 +3667,28 @@ a {
 }
 
 .Lead__container {
-  padding: 5em 20px;
+  padding: 6.25em 1.875em 3.125em;
+  text-align: center;
 }
 
 @media (min-width: 768px) {
   .Lead__container {
-    padding-left: 3em;
-    padding-right: 3em;
+    padding: 3.75em 3.125em;
+    text-align: left;
   }
 }
 
 @media (min-width: 1024px) {
   .Lead__container {
-    padding-left: 6em;
-    padding-right: 6em;
+    padding: 5em;
   }
 }
 
 .Lead__title {
-  font-family: Hind-SemiBold;
+  font-family: 'Hind', sans-serif;
   font-size: 2em;
-  color: #FFFFFF;
+  font-weight: 600;
+  color: white;
   line-height: 1.05;
   margin: 0 0 0.75em;
 }
@@ -3692,10 +3700,11 @@ a {
 }
 
 .Lead__content {
-  font-family: Hind-Regular;
-  font-size: 1.125em;
-  color: #FFFFFF;
-  line-height: 1.4;
+  font-family: 'Hind', sans-serif;
+  font-size: 1.0625em;
+  color: white;
+  letter-spacing: 0.5px;
+  line-height: 1.3;
   margin: 0;
 }
 
@@ -3710,9 +3719,11 @@ a {
 
 .Form__label {
   display: block;
-  font-family: Hind-Bold;
-  color: #FFFFFF;
+  font-family: 'Hind', sans-serif;
+  font-weight: 700;
+  color: white;
   margin-bottom: 0.125em;
+  text-align: left;
   text-transform: uppercase;
 }
 
@@ -3740,18 +3751,19 @@ a {
 }
 
 .Form__control {
-  background: #FFFFFF;
+  background: white;
   border: 0;
   border-radius: 2px;
   color: #202B39;
   display: block;
-  font-family: Hind-Regular;
+  font-family: 'Hind', sans-serif;
   font-size: 0.8125em;
   letter-spacing: 1px;
-  height: 2.875rem;
   padding: 0.6em 0.9375rem 0.5em;
   position: relative;
   width: 100%;
+  height: 46px;
+  height: 2.875rem;
 }
 
 .Form__control:focus {
@@ -3760,9 +3772,10 @@ a {
 
 .Form__submit {
   background: #0347C7;
-  color: #FFFFFF;
+  color: white;
   cursor: pointer;
-  font-family: Hind-SemiBold;
+  font-family: 'Hind', sans-serif;
+  font-weight: 600;
   text-transform: uppercase;
   -webkit-transition: background 500ms cubic-bezier(0.755, 0.05, 0.17, 0.785);
   -o-transition: background 500ms cubic-bezier(0.755, 0.05, 0.17, 0.785);
@@ -3773,34 +3786,48 @@ a {
   background: #F95265;
 }
 
+.Form__helper {
+  color: white;
+  display: block;
+  font-family: 'Hind', sans-serif;
+  font-size: 0.8125em;
+  line-height: 1.4;
+  margin: 0.625rem 2rem 0;
+  text-align: center;
+}
+
 .Nino {
+  display: none;
   height: 100%;
   overflow: hidden;
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 50%;
 }
 
+@media (min-width: 768px) {
+  .Nino {
+    display: block;
+  }
+}
+
 .Nino__figure {
-  bottom: -8em;
-  left: 0;
-  margin: 0;
+  bottom: 0;
+  height: 85%;
+  left: 50%;
+  margin: auto;
   position: absolute;
+  text-align: center;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .Nino__image {
-  display: none;
-  height: auto;
-  margin: 0 auto;
-  position: relative;
-  width: 50%;
+  display: inline-block;
+  height: 100%;
+  width: auto;
   z-index: 99;
-}
-
-@media (min-width: 768px) {
-  .Nino__image {
-    display: block;
-  }
 }
 
 .Utiles {
@@ -3819,7 +3846,7 @@ a {
 
 .Utiles__item.calculator {
   left: 25%;
-  top: 40%;
+  top: 45%;
 }
 
 .Utiles__item.clip {
@@ -3838,12 +3865,12 @@ a {
 }
 
 .Utiles__item.notebook {
-  left: 5%;
+  left: 10%;
   top: 5%;
 }
 
 .Utiles__item.paint-brush {
-  left: 20%;
+  left: 5%;
   top: 90%;
 }
 
@@ -3853,7 +3880,7 @@ a {
 }
 
 .Utiles__item.pencil-1 {
-  left: 10%;
+  left: 15%;
   top: 75%;
 }
 
@@ -3864,7 +3891,7 @@ a {
 
 .Utiles__item.protractor {
   left: 5%;
-  top: 30%;
+  top: 35%;
 }
 
 .Utiles__item.push-pin {
@@ -3884,7 +3911,7 @@ a {
 
 .Utiles__item.sharpener {
   left: 10%;
-  top: 55%;
+  top: 60%;
 }
 
 .Utiles__item.stapler-remover {
